@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@drawable/main_select_interface"
+    
+    >
+
+    <ImageView
+        android:id="@+id/wordCounts"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_alignTop="@+id/wordCheckers"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/wordcheck_onn" />
+
+    <ImageView
+        android:id="@+id/wordCheckers"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/wordCounts"
+        android:src="@drawable/wordcount_onn" />
+
+    <ImageView
+        android:id="@+id/wordChallenge"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/wordCounts"
+        android:src="@drawable/wordchallenge" />
+
+</RelativeLayout>

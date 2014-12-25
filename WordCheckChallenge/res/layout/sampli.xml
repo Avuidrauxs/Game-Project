@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/word_check_en"
+    
+     >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/points_txt"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="180dp"
+               
+                android:gravity="center"
+               
+                android:text="10"
+                android:textStyle="bold"
+                android:textSize="28dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#FFAC30"
+                />
+              <!--   android:textColor="#2a2e87"   -->
+              
+
+            <TextView
+                android:id="@+id/timer"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="30"
+                android:textColor="#ff1f29"
+                android:textSize="28dp"
+                android:textStyle="bold|italic"
+                android:typeface="serif" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/linearLayout1"
+            android:layout_below="@+id/linearLayout1"
+            android:layout_marginBottom="50dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/point_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="200dp"
+                android:gravity="center"
+                
+                android:text="Total score"
+                android:textSize="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="Time elapsed"
+                android:textSize="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/linearLayout2"
+            android:layout_below="@+id/linearLayout2"
+            android:layout_marginTop="14dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/word_clue"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:background="#ff1f29"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="A4"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/ansText"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:background="#ff1f29"
+                android:gravity="center"
+                android:hint="Enter Word here"
+                android:inputType="textCapWords"
+                android:padding="2dp"
+                android:maxLength="18"
+                >
+
+                <requestFocus />
+            </EditText>
+
+            <ImageView
+                android:id="@+id/submit_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/submit_en" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="540px"
+            android:layout_height="wrap_content"
+            
+            android:id="@+id/ad_slider" />
+    </LinearLayout>
+    
+</RelativeLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/end_screen"
+     >
+    
+    
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="YOU WIN!!"
+        android:textStyle="bold|italic"
+        android:textSize="28sp"
+        android:padding="2dp"
+        android:textColor="#000066"
+        android:id="@+id/winner_text"
+        
+        />
+    
+    
+    <Button 
+        android:padding="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        
+        android:id="@+id/win_again"
+        android:background="@drawable/play_onn_en"
+        
+        />
+    
+     <Button 
+         android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        
+        android:id="@+id/win_exit"
+        android:background="@drawable/close_onn_en"
+        />
+
+</LinearLayout>

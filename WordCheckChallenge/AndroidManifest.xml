@@ -1,0 +1,51 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.wordcheckchallenge"
+    android:versionCode="1"
+    android:versionName="1.0" >
+    
+  
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" android:logo="@drawable/logo">
+        
+        
+          <activity
+		android:screenOrientation="landscape"
+		android:name="com.umedia.wccgame.activities.MainGameActivity"
+>
+              <intent-filter>
+                  <action android:name="android.intent.action.MAIN"/>
+                  <category android:name="android.intent.category.LAUNCHER"/>
+              </intent-filter>
+          </activity>
+          <activity android:name="com.umedia.wccgame.activities.WordCheckActivity"
+              android:screenOrientation="landscape">
+              
+          </activity>
+          <activity android:name="com.umedia.wccgame.activities.WelcomeChoiceActivity"
+              android:screenOrientation="landscape"
+              >
+              
+          </activity>
+          <activity android:name="com.umedia.wccgame.activities.AllEnglishWords">
+          </activity>
+          <activity android:name="com.umedia.wccgame.activities.AltWelcomeActivity"
+              android:screenOrientation="landscape"
+              ></activity>
+          <activity android:name="com.umedia.wccgame.activities.NormalWordCheckActivity"
+              android:screenOrientation="landscape"
+              ></activity>
+          <activity android:name="com.umedia.wccgame.activities.HardWordCheckActivity"
+              android:screenOrientation="landscape"
+              ></activity>
+        
+    </application>
+
+</manifest>

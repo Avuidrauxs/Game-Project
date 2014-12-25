@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_select_interface" >
+    
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" >
+
+        <Spinner
+            android:id="@+id/difficulty"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:soundEffectsEnabled="true"
+            android:spinnerMode="dialog" 
+             android:layout_marginLeft="30dp"
+            />
+        
+        <ImageView
+            android:id="@+id/play_now"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           
+           
+            android:layout_marginTop="17dp"
+            
+            android:src="@drawable/codplay_onn_en" />
+
+        <ImageView
+            android:id="@+id/wordcheckAlt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="74dp"
+            android:layout_marginLeft="30dp"
+            android:src="@drawable/wordcheck_onn" />
+    </LinearLayout>
+
+</RelativeLayout>

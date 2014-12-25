@@ -1,0 +1,29 @@
+<resources>
+
+    <string name="app_name">"Word Check Challenge "</string>
+
+    
+    <string 
+        name="about_text"
+        >
+        <br>
+        The Word Check Challenge Version 1.0 (English)
+		Copyright © Hesse Herman Heinrich. All rights reserved.
+		No part of this software structure or games may be 
+		reproduced in any language or form: photocopying or 
+		electronic retrieval system or transmitted in any form 
+		or by any means without the price permission of the 
+		copyright owner.
+		</br>
+		<br>
+		The Word Check Challenge operating system and its user 
+		interface are protected by trademark and other pending 
+		or existing intellectual property rights in Ghana and 
+		other countries.
+ 		</br>
+		The Word Check Challenge educational software was 
+		developed for Herman Heinrich Hesse by Pellucid 
+		Technology Limited - Ghana.
+    </string>
+    
+</resources>
