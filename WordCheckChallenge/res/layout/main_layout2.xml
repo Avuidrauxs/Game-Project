@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/loading_en"
+   >
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="477dp"
+        android:layout_height="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:progressDrawable="@drawable/custom_progress" />
+
+    <ImageView
+        android:id="@+id/choose_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/progressBar1"
+        android:layout_alignTop="@+id/about_btn"
+        android:layout_marginRight="38dp"
+        android:src="@drawable/difficulty" />
+
+    <ImageView
+        android:id="@+id/main_play_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/progressBar1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="18dp"
+        android:src="@drawable/play_onn_en" />
+
+    <ImageView
+        android:id="@+id/how_to_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/main_play_btn"
+        android:layout_marginBottom="26dp"
+        android:layout_marginRight="40dp"
+        android:layout_toLeftOf="@+id/main_play_btn"
+        android:src="@drawable/how_to" />
+
+    <ImageView
+        android:id="@+id/about_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/main_play_btn"
+        android:layout_alignTop="@+id/how_to_btn"
+        android:src="@drawable/about_alt" />
+
+</RelativeLayout>

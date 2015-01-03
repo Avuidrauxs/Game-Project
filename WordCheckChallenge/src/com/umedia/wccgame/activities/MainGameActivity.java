@@ -10,8 +10,10 @@ import com.example.wordcheckchallenge.R;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -22,6 +24,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -31,6 +34,8 @@ public class MainGameActivity extends Activity {
 	ProgressBar webBar;
 	ProgressBarThread thd;
 	ProgressHandlerBar hanbar;
+	String difficulty;
+	
 	
 	
 	
@@ -62,6 +67,8 @@ public class MainGameActivity extends Activity {
 				webBar = (ProgressBar) findViewById(R.id.progressBar1);
 				hanbar = new ProgressHandlerBar();
 				thd = new ProgressBarThread();
+				
+				
 				//Context cont = MainGameActivity.this;
 				
 				//Toast.makeText(cont, cont.getFilesDir().getPath()+"/database/", Toast.LENGTH_LONG).show();
@@ -80,7 +87,12 @@ public class MainGameActivity extends Activity {
 			                        logoTimer = logoTimer +100;
 			                    };
 			                    //startActivity(new Intent(MainGameActivity.this, WelcomeChoiceActivity.class));
-			                    startActivity(new Intent(MainGameActivity.this, AltWelcomeActivity.class));
+			                    startActivity(new Intent(MainGameActivity.this, AltMainGameActivity.class));
+			                    
+			                    
+			                    
+			                   
+			                    
 			                }
 			                 
 			                catch (InterruptedException e) {
@@ -89,7 +101,7 @@ public class MainGameActivity extends Activity {
 			                }
 			                 
 			                finally{
-			                    finish();
+			                   finish();
 			                }
 						
 					}
@@ -108,6 +120,8 @@ public class MainGameActivity extends Activity {
 				
 		
 	}
+	
+	
 	
 	
 	
@@ -158,6 +172,56 @@ public class MainGameActivity extends Activity {
 		}
 		
 	}
+	
+	
+	//Creating an alert dialog to enable user to select difficulty 
+	public void showDifficultyDialog()
+	{
+		final CharSequence[] items = {"EASY","NORMAL","DIFFICULT"};
+		
+		AlertDialog.Builder builder=new AlertDialog.Builder(this);
+    	builder.setTitle("Pick a Difficulty");
+    	builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+		
+    		//The OK button listener
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				// TODO Auto-generated method stub
+			
+				
+						
+			}
+		});
+    	
+    	
+    	//The listener for the radio buttons
+    	builder.setSingleChoiceItems(items, -1, new DialogInterface.OnClickListener() {
+			
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				// TODO Auto-generated method stub
+				
+
+				if("EASY".equals(items[which]))
+				{
+				difficulty = "EASY";
+				}
+				else if("NORMAL".equals(items[which]))
+				{
+					difficulty = "NORMAL";
+					}
+				else if("DIFFICULT".equals(items[which]))
+				{
+					difficulty = "HARD";
+					}
+				
+			}
+		});
+		
+		builder.show();
+		
+	}
+	
 	/*
 
 	@Override

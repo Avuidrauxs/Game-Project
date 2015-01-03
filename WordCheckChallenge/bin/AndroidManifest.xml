@@ -45,6 +45,9 @@
           <activity android:name="com.umedia.wccgame.activities.HardWordCheckActivity"
               android:screenOrientation="landscape"
               ></activity>
+          <activity android:name="com.umedia.wccgame.activities.AltMainGameActivity"
+              android:screenOrientation="landscape"
+              ></activity>
         
     </application>
 

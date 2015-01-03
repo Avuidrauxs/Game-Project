@@ -683,12 +683,31 @@ public class NormalWordCheckActivity extends Activity {
 		return super.onOptionsItemSelected(item);
 	}
 
+
+	private Toast toast;
+	private long lastBackPressTime = 0;
+
+	
+	/*
+	 * 	I'd prefer to exit with double tap on the back button than with an exit Dialog.
+		In this solution, it show a toast when go back for the first time, 
+		warning that another back press will close the App. In this example less than 4 seconds.
+	*/
 	@Override
 	public void onBackPressed() {
-		// TODO Auto-generated method stub
+	  if (this.lastBackPressTime < System.currentTimeMillis() - 4000) {
+	    toast = Toast.makeText(this, "Press back again to close this app", 4000);
+	    toast.show();
+	    this.lastBackPressTime = System.currentTimeMillis();
+	  } else {
+	    if (toast != null) {
+	    toast.cancel();
+	  }
 		cunt.cancel();
-		dbb.close(); // close the database
-		super.onBackPressed();
+		dbb.close();	//closes the database
+	
+	  super.onBackPressed();
+	 }
 	}
 
 }
