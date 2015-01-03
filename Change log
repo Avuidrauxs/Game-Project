@@ -1,0 +1,9 @@
+
+
+Changelog 3/1/15
+
+
+- Rerouted away from AltWelcomeActivity
+- Introduced new onBackPressed in the      WordCheckActivity,NormalWordCheckActivity,HArdWordCheckActivity.
+- Introduced new layout and activity (main_layout2 and AltMainActivity  respectively).
+- Introduced new buttons in the AltMainActivity
